@@ -14,15 +14,14 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Cardápio RU UFBA',
+          title: const Text('Cardápio RU',
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
           backgroundColor: const Color(0xFF00008B),
         ),
         body: SizedBox(
           width: double.infinity,
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+          child: ListView(children: [
             const SizedBox(
               height: 20,
             ),
