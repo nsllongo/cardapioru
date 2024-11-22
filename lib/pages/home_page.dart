@@ -12,68 +12,57 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Cardápio RU',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-          backgroundColor: const Color(0xFF00008B),
-        ),
-        body: SizedBox(
-          width: double.infinity,
-          child: ListView(children: [
-            const SizedBox(
-              height: 20,
-            ),
-            FractionallySizedBox(
-                widthFactor: 0.9,
-                child: Container(
-                  height: 250,
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(200, 200, 200, 200),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: const Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text('ALMOÇO',
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold)),
-                    ],
-                  ),
-                )),
-            const SizedBox(
+        child: Scaffold(
+      appBar: AppBar(
+        title: const Text('Cardápio RU',
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+        backgroundColor: const Color(0xFF00008B),
+      ),
+      body: SizedBox(
+        width: double.infinity,
+        child: ListView(
+          children: const [
+            SizedBox(
               height: 20,
             ),
             FractionallySizedBox(
               widthFactor: 0.9,
-              child: Container(
-                height: 250,
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(200, 200, 200, 200),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: const Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+              child: Card(
+                elevation: 10,
+                child: Column(
                   children: [
-                    SizedBox(
-                      height: 10,
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text('ALMOÇO',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold)),
                     ),
-                    Text('JANTA',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold)),
                   ],
                 ),
               ),
-            )
-          ]),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            FractionallySizedBox(
+              widthFactor: 0.9,
+              child: Card(
+                elevation: 10,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text('JANTA',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold)),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
-      ),
-    );
+      ), // ListView
+    )); // Scaffold
   }
 }
